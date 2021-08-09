@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		289FE7C826A55B2200BE585C /* TestNWEventPopupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FE7B526A55B2100BE585C /* TestNWEventPopupApp.swift */; };
+		289FE7C926A55B2200BE585C /* TestNWEventPopupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FE7B526A55B2100BE585C /* TestNWEventPopupApp.swift */; };
+		289FE7CA26A55B2200BE585C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FE7B626A55B2100BE585C /* ContentView.swift */; };
+		289FE7CB26A55B2200BE585C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FE7B626A55B2100BE585C /* ContentView.swift */; };
+		289FE7CC26A55B2200BE585C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 289FE7B726A55B2200BE585C /* Assets.xcassets */; };
+		289FE7CD26A55B2200BE585C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 289FE7B726A55B2200BE585C /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		289FE7B526A55B2100BE585C /* TestNWEventPopupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNWEventPopupApp.swift; sourceTree = "<group>"; };
+		289FE7B626A55B2100BE585C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		289FE7B726A55B2200BE585C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		289FE7BC26A55B2200BE585C /* TestNWEventPopup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestNWEventPopup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		289FE7BF26A55B2200BE585C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		289FE7C426A55B2200BE585C /* TestNWEventPopup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestNWEventPopup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		289FE7C626A55B2200BE585C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		289FE7C726A55B2200BE585C /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		289FE7B926A55B2200BE585C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		289FE7C126A55B2200BE585C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		289FE7AF26A55B2100BE585C = {
+			isa = PBXGroup;
+			children = (
+				289FE7B426A55B2100BE585C /* Shared */,
+				289FE7BE26A55B2200BE585C /* iOS */,
+				289FE7C526A55B2200BE585C /* macOS */,
+				289FE7BD26A55B2200BE585C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		289FE7B426A55B2100BE585C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				289FE7B526A55B2100BE585C /* TestNWEventPopupApp.swift */,
+				289FE7B626A55B2100BE585C /* ContentView.swift */,
+				289FE7B726A55B2200BE585C /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		289FE7BD26A55B2200BE585C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				289FE7BC26A55B2200BE585C /* TestNWEventPopup.app */,
+				289FE7C426A55B2200BE585C /* TestNWEventPopup.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		289FE7BE26A55B2200BE585C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				289FE7BF26A55B2200BE585C /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		289FE7C526A55B2200BE585C /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				289FE7C626A55B2200BE585C /* Info.plist */,
+				289FE7C726A55B2200BE585C /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		289FE7BB26A55B2200BE585C /* TestNWEventPopup (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 289FE7D026A55B2200BE585C /* Build configuration list for PBXNativeTarget "TestNWEventPopup (iOS)" */;
+			buildPhases = (
+				289FE7B826A55B2200BE585C /* Sources */,
+				289FE7B926A55B2200BE585C /* Frameworks */,
+				289FE7BA26A55B2200BE585C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TestNWEventPopup (iOS)";
+			productName = "TestNWEventPopup (iOS)";
+			productReference = 289FE7BC26A55B2200BE585C /* TestNWEventPopup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		289FE7C326A55B2200BE585C /* TestNWEventPopup (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 289FE7D326A55B2200BE585C /* Build configuration list for PBXNativeTarget "TestNWEventPopup (macOS)" */;
+			buildPhases = (
+				289FE7C026A55B2200BE585C /* Sources */,
+				289FE7C126A55B2200BE585C /* Frameworks */,
+				289FE7C226A55B2200BE585C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TestNWEventPopup (macOS)";
+			productName = "TestNWEventPopup (macOS)";
+			productReference = 289FE7C426A55B2200BE585C /* TestNWEventPopup.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		289FE7B026A55B2100BE585C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					289FE7BB26A55B2200BE585C = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					289FE7C326A55B2200BE585C = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 289FE7B326A55B2100BE585C /* Build configuration list for PBXProject "TestNWEventPopup" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 289FE7AF26A55B2100BE585C;
+			productRefGroup = 289FE7BD26A55B2200BE585C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				289FE7BB26A55B2200BE585C /* TestNWEventPopup (iOS) */,
+				289FE7C326A55B2200BE585C /* TestNWEventPopup (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		289FE7BA26A55B2200BE585C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				289FE7CC26A55B2200BE585C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		289FE7C226A55B2200BE585C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				289FE7CD26A55B2200BE585C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		289FE7B826A55B2200BE585C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				289FE7CA26A55B2200BE585C /* ContentView.swift in Sources */,
+				289FE7C826A55B2200BE585C /* TestNWEventPopupApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		289FE7C026A55B2200BE585C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				289FE7CB26A55B2200BE585C /* ContentView.swift in Sources */,
+				289FE7C926A55B2200BE585C /* TestNWEventPopupApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		289FE7CE26A55B2200BE585C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		289FE7CF26A55B2200BE585C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		289FE7D126A55B2200BE585C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X7626A6T23;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextweb.TestNWEventPopup;
+				PRODUCT_NAME = TestNWEventPopup;
+				PROVISIONING_PROFILE_SPECIFIER = "Test All";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		289FE7D226A55B2200BE585C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X7626A6T23;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextweb.TestNWEventPopup;
+				PRODUCT_NAME = TestNWEventPopup;
+				PROVISIONING_PROFILE_SPECIFIER = "Test All";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		289FE7D426A55B2200BE585C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextweb.TestNWEventPopup;
+				PRODUCT_NAME = TestNWEventPopup;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		289FE7D526A55B2200BE585C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextweb.TestNWEventPopup;
+				PRODUCT_NAME = TestNWEventPopup;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		289FE7B326A55B2100BE585C /* Build configuration list for PBXProject "TestNWEventPopup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				289FE7CE26A55B2200BE585C /* Debug */,
+				289FE7CF26A55B2200BE585C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		289FE7D026A55B2200BE585C /* Build configuration list for PBXNativeTarget "TestNWEventPopup (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				289FE7D126A55B2200BE585C /* Debug */,
+				289FE7D226A55B2200BE585C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		289FE7D326A55B2200BE585C /* Build configuration list for PBXNativeTarget "TestNWEventPopup (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				289FE7D426A55B2200BE585C /* Debug */,
+				289FE7D526A55B2200BE585C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 289FE7B026A55B2100BE585C /* Project object */;
+}

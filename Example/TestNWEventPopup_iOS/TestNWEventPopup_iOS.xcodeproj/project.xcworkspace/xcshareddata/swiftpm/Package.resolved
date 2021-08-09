@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AFNetworking",
+        "repositoryURL": "https://github.com/AFNetworking/AFNetworking.git",
+        "state": {
+          "branch": null,
+          "revision": "ffae2391ab0c29dc88eb0a58d2f5b2c2c27cadbf",
+          "version": "4.0.1"
+        }
+      },
+      {
+        "package": "NWEventPopup",
+        "repositoryURL": "https://github.com/hlkim/NWEventPopup.git",
+        "state": {
+          "branch": null,
+          "revision": "f80c7128662564f59c1c0d193e4340d6d8c46a78",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

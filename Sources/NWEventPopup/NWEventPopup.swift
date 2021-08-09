@@ -164,12 +164,39 @@ extension NWEventPopup {
         
         print("decidePolicyForNavigationAction")
         
-        guard let url = navigationAction.request.url else {
-            decisionHandler(.allow)
-            return
+        var wkNavigationActionPolicy: WKNavigationActionPolicy = .cancel
+
+        defer {
+            decisionHandler(wkNavigationActionPolicy)
         }
         
+        guard let url = navigationAction.request.url else {
+            return
+        }
+
         if (navigationAction.targetFrame == nil) {
+            
+            let app = UIApplication.shared
+            if app.canOpenURL(url) {
+
+                app.open(url, options: [:], completionHandler: nil)
+                return
+            }
+        }
+        
+        if let scheme = navigationAction.request.url?.scheme,
+           (!["http", "https", "file", "about"].contains(scheme)) {
+            
+            if (scheme.contains("nextweb://")) {
+                vc?.dismiss(animated: true, completion: nil)
+                
+                if url.absoluteString == "nextweb://close" {
+                    return
+                }
+                
+                popupCallback?.OnNextWebPopup(scheme: url.absoluteString)
+                return
+            }
             
             let app = UIApplication.shared
             if app.canOpenURL(url) {
@@ -180,24 +207,6 @@ extension NWEventPopup {
             }
         }
         
-        guard let scheme = url.scheme else {
-            decisionHandler(.allow)
-            return
-        }
-        
-        if (scheme.contains("nextweb://")) {
-            vc?.dismiss(animated: true, completion: nil)
-            
-            if url.absoluteString == "nextweb://close" {
-                decisionHandler(.cancel)
-                return
-            }
-            
-            popupCallback?.OnNextWebPopup(scheme: url.absoluteString)
-            decisionHandler(.allow)
-            return
-        }
-        
-        decisionHandler(.allow)
+        wkNavigationActionPolicy = .allow
     }
 }

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2882D6DD26C0FE9D00409EE0 /* NWEventPopup in Frameworks */ = {isa = PBXBuildFile; productRef = 2882D6DC26C0FE9D00409EE0 /* NWEventPopup */; };
 		289FE7C826A55B2200BE585C /* TestNWEventPopupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FE7B526A55B2100BE585C /* TestNWEventPopupApp.swift */; };
 		289FE7C926A55B2200BE585C /* TestNWEventPopupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FE7B526A55B2100BE585C /* TestNWEventPopupApp.swift */; };
 		289FE7CA26A55B2200BE585C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FE7B626A55B2100BE585C /* ContentView.swift */; };
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2882D6DD26C0FE9D00409EE0 /* NWEventPopup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +108,9 @@
 			dependencies = (
 			);
 			name = "TestNWEventPopup (iOS)";
+			packageProductDependencies = (
+				2882D6DC26C0FE9D00409EE0 /* NWEventPopup */,
+			);
 			productName = "TestNWEventPopup (iOS)";
 			productReference = 289FE7BC26A55B2200BE585C /* TestNWEventPopup.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +158,9 @@
 				Base,
 			);
 			mainGroup = 289FE7AF26A55B2100BE585C;
+			packageReferences = (
+				2882D6DB26C0FE9D00409EE0 /* XCRemoteSwiftPackageReference "NWEventPopup" */,
+			);
 			productRefGroup = 289FE7BD26A55B2200BE585C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -322,6 +330,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = X7626A6T23;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -330,7 +339,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nextweb.TestNWEventPopup;
+				PRODUCT_BUNDLE_IDENTIFIER = com.miraenec.distribution;
 				PRODUCT_NAME = TestNWEventPopup;
 				PROVISIONING_PROFILE_SPECIFIER = "Test All";
 				SDKROOT = iphoneos;
@@ -344,8 +353,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = X7626A6T23;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -354,9 +364,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nextweb.TestNWEventPopup;
+				PRODUCT_BUNDLE_IDENTIFIER = com.miraenec.distribution;
 				PRODUCT_NAME = TestNWEventPopup;
-				PROVISIONING_PROFILE_SPECIFIER = "Test All";
+				PROVISIONING_PROFILE_SPECIFIER = "Miraenec Distribution Test";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,6 +449,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2882D6DB26C0FE9D00409EE0 /* XCRemoteSwiftPackageReference "NWEventPopup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hlkim/NWEventPopup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2882D6DC26C0FE9D00409EE0 /* NWEventPopup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2882D6DB26C0FE9D00409EE0 /* XCRemoteSwiftPackageReference "NWEventPopup" */;
+			productName = NWEventPopup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 289FE7B026A55B2100BE585C /* Project object */;
 }

@@ -11,12 +11,21 @@
         }
       },
       {
+        "package": "HTMLString",
+        "repositoryURL": "https://github.com/alexaubry/HTMLString",
+        "state": {
+          "branch": null,
+          "revision": "04613a3b0f40a91e554b5174c0a10657f1a26357",
+          "version": "6.0.1"
+        }
+      },
+      {
         "package": "NWEventPopup",
         "repositoryURL": "https://github.com/hlkim/NWEventPopup.git",
         "state": {
           "branch": null,
-          "revision": "f80c7128662564f59c1c0d193e4340d6d8c46a78",
-          "version": "1.0.0"
+          "revision": "9305cec9a0f3f9cb4986766de05785d432750c28",
+          "version": "1.0.1"
         }
       }
     ]

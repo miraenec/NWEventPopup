@@ -213,13 +213,11 @@ extension NWEventPopup: WKNavigationDelegate {
            (!["http", "https", "file", "about"].contains(scheme)) {
             
             if (scheme.contains("nextweb")) {
-                vc?.dismiss(animated: true, completion: nil)
-                
-                if url.absoluteString == "nextweb://close" {
-                    return
-                }
-                
-                popupCallback?.OnNextWebPopup(scheme: url.absoluteString)
+                vc?.dismiss(animated: true, completion: {
+                    if url.absoluteString != "nextweb://close" {
+                        self.popupCallback?.OnNextWebPopup(scheme: url.absoluteString)
+                    }
+                })
                 return
             }
             

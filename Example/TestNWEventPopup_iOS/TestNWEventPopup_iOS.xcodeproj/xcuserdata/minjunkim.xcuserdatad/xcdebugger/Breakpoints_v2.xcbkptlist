@@ -3,22 +3,4 @@
    uuid = "5633F0D8-9F68-42A7-8064-6145D0A14254"
    type = "1"
    version = "2.0">
-   <Breakpoints>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "34086647-073C-418E-9447-C9060E15B978"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../../../Library/Developer/Xcode/DerivedData/TestNWEventPopup_iOS-aecjtjebgfubbqecmbvmjaimomua/SourcePackages/checkouts/NWEventPopup/Sources/NWEventPopup/NWEventPopup.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "showPopup(vc:result:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-   </Breakpoints>
 </Bucket>

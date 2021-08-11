@@ -14,6 +14,8 @@ class NativeViewDemo: UIViewController {
         super.viewDidLoad()
         
         let eventPopup = NWEventPopup.shared
+        eventPopup.initLogger(self)
+        
         var params: [String:Any] = [:]
         params["user_id"] = "test01"
         params["v_id"] = "A2008031208415926"

@@ -7,7 +7,7 @@ public protocol OnNextWebPopupCallback {
 }
 
 @objc
-public class NWEventPopup : NSObject, WKUIDelegate, WKNavigationDelegate {
+public class NWEventPopup : NSObject {
     
     private var popupCallback: OnNextWebPopupCallback?
     
@@ -89,7 +89,7 @@ public class NWEventPopup : NSObject, WKUIDelegate, WKNavigationDelegate {
         
         html = html.removingPercentEncoding ?? ""
         html = html.removingHTMLEntities().replacingOccurrences(of: "+", with: " ")
-        webView.loadHTMLString(html, baseURL: nil)
+        webView.loadHTMLString(html, baseURL: URL(string: "https:"))
         
         let popupCtrl = UIViewController()
         popupCtrl.view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
@@ -105,7 +105,7 @@ public class NWEventPopup : NSObject, WKUIDelegate, WKNavigationDelegate {
     }
 }
 
-extension NWEventPopup {
+extension NWEventPopup: WKUIDelegate {
     // MARK: WKUIDelegate
     //alert 처리
     open func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
@@ -157,7 +157,21 @@ extension NWEventPopup {
         vc?.present(alertController, animated: true, completion: nil)
         
     }
+}
 
+extension NWEventPopup: WKNavigationDelegate {
+    
+    open func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        print("page finished load")
+    }
+    
+    open func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
+        print("didReceiveServerRedirectForProvisionalNavigation: \(navigation.debugDescription)")
+    }
+    
+    open func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        print("didStartProvisionalNavigation")
+    }
     
     // 탐색을 허용할지 아니면 취소할지 결정(쿠키 설정)
     open func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
@@ -182,6 +196,17 @@ extension NWEventPopup {
                 app.open(url, options: [:], completionHandler: nil)
                 return
             }
+        }
+        
+        if navigationAction.navigationType == .linkActivated  {
+            if let url = navigationAction.request.url,
+                UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url)
+               ㄷ print(url)
+            } else {
+                wkNavigationActionPolicy = .allow
+            }
+            return
         }
         
         if let scheme = navigationAction.request.url?.scheme,

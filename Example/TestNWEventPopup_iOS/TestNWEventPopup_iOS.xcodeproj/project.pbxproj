@@ -14,7 +14,7 @@
 		28AA699526A5647E0090B5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28AA699326A5647E0090B5FE /* LaunchScreen.storyboard */; };
 		28AA69A026AE70C80090B5FE /* WebViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA699F26AE70C80090B5FE /* WebViewDemo.swift */; };
 		28AA69A226AE70D40090B5FE /* NativeViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA69A126AE70D40090B5FE /* NativeViewDemo.swift */; };
-		28B255AC26C1028E0061AA9E /* NWEventPopup in Frameworks */ = {isa = PBXBuildFile; productRef = 28B255AB26C1028E0061AA9E /* NWEventPopup */; };
+		28B255B226C10A970061AA9E /* NWEventPopup in Frameworks */ = {isa = PBXBuildFile; productRef = 28B255B126C10A970061AA9E /* NWEventPopup */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28B255AC26C1028E0061AA9E /* NWEventPopup in Frameworks */,
+				28B255B226C10A970061AA9E /* NWEventPopup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +89,7 @@
 			);
 			name = TestNWEventPopup_iOS;
 			packageProductDependencies = (
-				28B255AB26C1028E0061AA9E /* NWEventPopup */,
+				28B255B126C10A970061AA9E /* NWEventPopup */,
 			);
 			productName = TestNWEventPopup_iOS;
 			productReference = 28AA698526A5647C0090B5FE /* TestNWEventPopup_iOS.app */;
@@ -119,7 +119,7 @@
 			);
 			mainGroup = 28AA697C26A5647C0090B5FE;
 			packageReferences = (
-				28B255AA26C1028E0061AA9E /* XCRemoteSwiftPackageReference "NWEventPopup" */,
+				28B255B026C10A970061AA9E /* XCRemoteSwiftPackageReference "NWEventPopup" */,
 			);
 			productRefGroup = 28AA698626A5647C0090B5FE /* Products */;
 			projectDirPath = "";
@@ -361,20 +361,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		28B255AA26C1028E0061AA9E /* XCRemoteSwiftPackageReference "NWEventPopup" */ = {
+		28B255B026C10A970061AA9E /* XCRemoteSwiftPackageReference "NWEventPopup" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hlkim/NWEventPopup.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
+				minimumVersion = 1.0.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		28B255AB26C1028E0061AA9E /* NWEventPopup */ = {
+		28B255B126C10A970061AA9E /* NWEventPopup */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 28B255AA26C1028E0061AA9E /* XCRemoteSwiftPackageReference "NWEventPopup" */;
+			package = 28B255B026C10A970061AA9E /* XCRemoteSwiftPackageReference "NWEventPopup" */;
 			productName = NWEventPopup;
 		};
 /* End XCSwiftPackageProductDependency section */

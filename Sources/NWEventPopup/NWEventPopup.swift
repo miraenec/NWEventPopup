@@ -202,7 +202,7 @@ extension NWEventPopup: WKNavigationDelegate {
             if let url = navigationAction.request.url,
                 UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url)
-               ㄷ print(url)
+                print(url)
             } else {
                 wkNavigationActionPolicy = .allow
             }

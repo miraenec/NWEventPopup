@@ -89,6 +89,7 @@ public class NWEventPopup : NSObject {
         
         html = html.removingPercentEncoding ?? ""
         html = html.removingHTMLEntities().replacingOccurrences(of: "+", with: " ")
+        html = html.replacingOccurrences(of: "xtr_pop_html_plus", with: "+")
         webView.loadHTMLString(html, baseURL: URL(string: "https:"))
         
         let popupCtrl = UIViewController()

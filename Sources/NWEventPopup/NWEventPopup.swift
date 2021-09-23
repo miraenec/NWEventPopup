@@ -78,6 +78,36 @@ public class NWEventPopup : NSObject {
         webView.configuration.preferences = preferences
         webView.configuration.processPool = WKProcessPool()
         
+        let popupCtrl = UIViewController()
+        popupCtrl.view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        popupCtrl.view.addSubview(webView)
+        
+        if let popup_resize = result["popup_resize"], popup_resize.isEmpty == false, popup_resize == "1" {
+            NSLayoutConstraint.activate([
+                webView.topAnchor.constraint(equalTo: popupCtrl.view.topAnchor),
+                webView.trailingAnchor.constraint(equalTo: popupCtrl.view.trailingAnchor),
+                webView.leadingAnchor.constraint(equalTo: popupCtrl.view.leadingAnchor),
+                webView.bottomAnchor.constraint(equalTo: popupCtrl.view.bottomAnchor)
+            ])
+        } else {
+            if let width = result["width"], let height = result["height"] {
+                NSLayoutConstraint.activate([
+                    webView.centerXAnchor.constraint(equalTo: popupCtrl.view.centerXAnchor),
+                    webView.centerYAnchor.constraint(equalTo: popupCtrl.view.centerYAnchor),
+                    webView.widthAnchor.constraint(equalToConstant: CGFloat((width as NSString).floatValue)),
+                    webView.heightAnchor.constraint(equalToConstant: CGFloat((height as NSString).floatValue))
+                ])
+            } else {
+                NSLayoutConstraint.activate([
+                    webView.centerXAnchor.constraint(equalTo: popupCtrl.view.centerXAnchor),
+                    webView.centerYAnchor.constraint(equalTo: popupCtrl.view.centerYAnchor),
+                    webView.widthAnchor.constraint(equalToConstant: popupCtrl.view.bounds.size.width),
+                    webView.heightAnchor.constraint(equalToConstant: popupCtrl.view.bounds.size.height)
+                ])
+            }
+        }
+        popupCtrl.modalPresentationStyle = .overCurrentContext
+        
         guard var html = result["popup_html"] else {
             let alertController = UIAlertController(title: "결과", message: result["message"], preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: { (action) in
@@ -91,17 +121,6 @@ public class NWEventPopup : NSObject {
         html = html.removingHTMLEntities().replacingOccurrences(of: "+", with: " ")
         html = html.replacingOccurrences(of: "xtr_pop_html_plus", with: "+")
         webView.loadHTMLString(html, baseURL: URL(string: "https:"))
-        
-        let popupCtrl = UIViewController()
-        popupCtrl.view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
-        popupCtrl.view.addSubview(webView)
-        NSLayoutConstraint.activate([
-            webView.topAnchor.constraint(equalTo: popupCtrl.view.topAnchor),
-            webView.trailingAnchor.constraint(equalTo: popupCtrl.view.trailingAnchor),
-            webView.leadingAnchor.constraint(equalTo: popupCtrl.view.leadingAnchor),
-            webView.bottomAnchor.constraint(equalTo: popupCtrl.view.bottomAnchor)
-        ])
-        popupCtrl.modalPresentationStyle = .overCurrentContext
         vc?.present(popupCtrl, animated: true, completion: nil)
     }
 }

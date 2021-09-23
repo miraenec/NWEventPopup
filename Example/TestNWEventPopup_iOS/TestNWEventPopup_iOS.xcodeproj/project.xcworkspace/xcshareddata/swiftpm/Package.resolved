@@ -18,15 +18,6 @@
           "revision": "04613a3b0f40a91e554b5174c0a10657f1a26357",
           "version": "6.0.1"
         }
-      },
-      {
-        "package": "NWEventPopup",
-        "repositoryURL": "https://github.com/hlkim/NWEventPopup.git",
-        "state": {
-          "branch": null,
-          "revision": "02ab3d94de1c9c012fd41d6d975e8a61ba83f6c8",
-          "version": "1.0.1"
-        }
       }
     ]
   },

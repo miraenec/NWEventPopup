@@ -61,6 +61,7 @@ public class NWEventPopup : NSObject {
         let cookieStorage = HTTPCookieStorage.shared
         cookieStorage.cookieAcceptPolicy = .always
         
+        webView.isOpaque = false
         webView.backgroundColor = .clear
         webView.uiDelegate = self
         webView.navigationDelegate = self

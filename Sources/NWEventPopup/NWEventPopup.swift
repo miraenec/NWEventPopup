@@ -50,6 +50,12 @@ public class NWEventPopup : NSObject {
     }
     
     private func showPopup(vc: UIViewController?, result: Dictionary<String, String>) {
+        
+        guard var html = result["popup_html"], html.isEmpty == false else {
+            print("found not html popup")
+            return
+        }
+        
         let source = "var meta = document.createElement('meta');" + "meta.name = 'viewport';" + "meta.content='width=device-width, shrink-to-fit=yes, user-scalable=no;" + "var head = document.getElementsByTagName('head')[0];" + "head.appendChild(meta);"
         let userContentController = WKUserContentController()
         let webConfiguration = WKWebViewConfiguration()
@@ -108,15 +114,6 @@ public class NWEventPopup : NSObject {
             }
         }
         popupCtrl.modalPresentationStyle = .overCurrentContext
-        
-        guard var html = result["popup_html"] else {
-            let alertController = UIAlertController(title: "결과", message: result["message"], preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: { (action) in
-                
-            }))
-            vc?.present(alertController, animated: true, completion: nil)
-            return
-        }
         
         html = html.removingPercentEncoding ?? ""
         html = html.removingHTMLEntities().replacingOccurrences(of: "+", with: " ")

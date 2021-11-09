@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NWEventPopup
 
 class NativeViewDemo: UIViewController {
  

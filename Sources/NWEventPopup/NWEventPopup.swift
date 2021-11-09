@@ -86,7 +86,6 @@ public class NWEventPopup : NSObject {
         webView.configuration.processPool = WKProcessPool()
         
         let popupCtrl = UIViewController()
-        popupCtrl.view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         popupCtrl.view.addSubview(webView)
         
         if let popup_resize = result["popup_resize"], popup_resize.isEmpty == false, popup_resize == "1" {

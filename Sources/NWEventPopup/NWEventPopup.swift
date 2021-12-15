@@ -88,30 +88,30 @@ public class NWEventPopup : NSObject {
         let popupCtrl = UIViewController()
         popupCtrl.view.addSubview(webView)
         
-        if let popup_resize = result["popup_resize"], popup_resize.isEmpty == false, popup_resize == "1" {
+//        if let popup_resize = result["popup_resize"], popup_resize.isEmpty == false, popup_resize == "1" {
             NSLayoutConstraint.activate([
                 webView.topAnchor.constraint(equalTo: popupCtrl.view.topAnchor),
                 webView.trailingAnchor.constraint(equalTo: popupCtrl.view.trailingAnchor),
                 webView.leadingAnchor.constraint(equalTo: popupCtrl.view.leadingAnchor),
                 webView.bottomAnchor.constraint(equalTo: popupCtrl.view.bottomAnchor)
             ])
-        } else {
-            if let width = result["width"], let height = result["height"] {
-                NSLayoutConstraint.activate([
-                    webView.centerXAnchor.constraint(equalTo: popupCtrl.view.centerXAnchor),
-                    webView.centerYAnchor.constraint(equalTo: popupCtrl.view.centerYAnchor),
-                    webView.widthAnchor.constraint(equalToConstant: CGFloat((width as NSString).floatValue)),
-                    webView.heightAnchor.constraint(equalToConstant: CGFloat((height as NSString).floatValue))
-                ])
-            } else {
-                NSLayoutConstraint.activate([
-                    webView.centerXAnchor.constraint(equalTo: popupCtrl.view.centerXAnchor),
-                    webView.centerYAnchor.constraint(equalTo: popupCtrl.view.centerYAnchor),
-                    webView.widthAnchor.constraint(equalToConstant: popupCtrl.view.bounds.size.width),
-                    webView.heightAnchor.constraint(equalToConstant: popupCtrl.view.bounds.size.height)
-                ])
-            }
-        }
+//        } else {
+//            if let width = result["width"], let height = result["height"] {
+//                NSLayoutConstraint.activate([
+//                    webView.centerXAnchor.constraint(equalTo: popupCtrl.view.centerXAnchor),
+//                    webView.centerYAnchor.constraint(equalTo: popupCtrl.view.centerYAnchor),
+//                    webView.widthAnchor.constraint(equalToConstant: CGFloat((width as NSString).floatValue)),
+//                    webView.heightAnchor.constraint(equalToConstant: CGFloat((height as NSString).floatValue))
+//                ])
+//            } else {
+//                NSLayoutConstraint.activate([
+//                    webView.centerXAnchor.constraint(equalTo: popupCtrl.view.centerXAnchor),
+//                    webView.centerYAnchor.constraint(equalTo: popupCtrl.view.centerYAnchor),
+//                    webView.widthAnchor.constraint(equalToConstant: popupCtrl.view.bounds.size.width),
+//                    webView.heightAnchor.constraint(equalToConstant: popupCtrl.view.bounds.size.height)
+//                ])
+//            }
+//        }
         popupCtrl.modalPresentationStyle = .overCurrentContext
         
         html = html.removingPercentEncoding ?? ""

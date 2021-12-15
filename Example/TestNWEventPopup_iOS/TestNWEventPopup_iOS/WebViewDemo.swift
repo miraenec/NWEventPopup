@@ -11,6 +11,7 @@ import WebKit
 class WebViewDemo: UIViewController, WKUIDelegate  {
     @IBOutlet weak var webView: WKWebView!
     var paramUrl: String = ""
+    var paramHtml: String = ""
 
     override func loadView() {
         super.loadView()
@@ -22,11 +23,15 @@ class WebViewDemo: UIViewController, WKUIDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        let url = URL(string: paramUrl)
-        let request = URLRequest(url: url!)
-        self.webView?.allowsBackForwardNavigationGestures = true  //뒤로가기 제스쳐 허용
+        webView?.allowsBackForwardNavigationGestures = true  //뒤로가기 제스쳐 허용
         webView.configuration.preferences.javaScriptEnabled = true  //자바스크립트 활성화
-        webView.load(request)
+        if (paramUrl.count > 0) {
+            let url = URL(string: paramUrl)
+            let request = URLRequest(url: url!)
+            webView.load(request)
+        } else {
+            webView.loadHTMLString(paramHtml, baseURL: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() { super.didReceiveMemoryWarning() } //모달창 닫힐때 앱 종료현상 방지.

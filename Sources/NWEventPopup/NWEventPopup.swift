@@ -73,6 +73,7 @@ public class NWEventPopup : NSObject {
         webView.navigationDelegate = self
         webView.contentScaleFactor = 1.0
         webView.allowsBackForwardNavigationGestures = true
+        webView.customUserAgent = "NWEventPopup"
 
         let preferences = WKPreferences()
         preferences.javaScriptEnabled = true

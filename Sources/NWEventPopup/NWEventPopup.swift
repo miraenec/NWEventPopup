@@ -234,6 +234,8 @@ extension NWEventPopup: WKNavigationDelegate {
                 vc?.dismiss(animated: true, completion: {
                     if url.absoluteString != "nextweb://close" {
                         self.popupCallback?.OnNextWebPopup(scheme: url.absoluteString)
+                    } else {
+                        print(url.absoluteString)
                     }
                 })
                 return

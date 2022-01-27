@@ -13,10 +13,12 @@ public class NWEventPopup : NSObject {
     
     public static let shared = NWEventPopup()
     private var vc: UIViewController?
+    private var showTime = 0.0
     
     @objc
-    public func initLogger(_ obj:Any?) {
+    public func initLogger(_ obj:Any?, timer: Double = 7.0) {
         self.vc = obj as? UIViewController
+        self.showTime = timer
     }
     
     @objc
@@ -39,7 +41,13 @@ public class NWEventPopup : NSObject {
                     print("response:%@", response!);
                 }
                 
-                self.showPopup(vc: obj as? UIViewController, result: StringUtil.toDictionary(response as AnyObject))
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + self.showTime) {
+                    if let vc = obj as? UIViewController, vc.isViewLoaded, vc.view.window != nil {
+                        print("showPopup")
+
+                        self.showPopup(vc: obj as? UIViewController, result: StringUtil.toDictionary(response as AnyObject))
+                    }
+                }
             },
             failure: { (task, error) -> Void in
                                                                         

@@ -240,11 +240,10 @@ extension NWEventPopup: WKNavigationDelegate {
             
             if (scheme.contains("nextweb")) {
                 vc?.dismiss(animated: true, completion: {
-                    if url.absoluteString != "nextweb://close" {
-                        self.popupCallback?.OnNextWebPopup(scheme: url.absoluteString)
-                    } else {
+                    if url.absoluteString == "nextweb://close" {
                         print(url.absoluteString)
                     }
+                    self.popupCallback?.OnNextWebPopup(scheme: url.absoluteString)
                 })
                 return
             }
@@ -253,7 +252,6 @@ extension NWEventPopup: WKNavigationDelegate {
             if app.canOpenURL(url) {
 
                 app.open(url, options: [:], completionHandler: nil)
-                decisionHandler(.cancel)
                 return
             }
         }

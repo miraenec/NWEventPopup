@@ -238,7 +238,7 @@ extension NWEventPopup: WKNavigationDelegate {
         if let scheme = navigationAction.request.url?.scheme,
            (!["http", "https", "file", "about"].contains(scheme)) {
             
-            if (scheme.contains("nextweb")) {
+            if (scheme.contains("nextweb") || (scheme.contains("lfmall"))) {
                 vc?.dismiss(animated: true, completion: {
                     if url.absoluteString == "nextweb://close" {
                         print(url.absoluteString)
